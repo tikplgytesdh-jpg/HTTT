@@ -21,7 +21,7 @@
             font-family: 'Tajawal', sans-serif;
             background-color: #fafafa;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             color: var(--text-gray);
             scroll-behavior: smooth;
         }
@@ -39,23 +39,16 @@
             border: 3px double var(--gold-light);
         }
 
-        /* الزخارف */
-        .cv-container::before { content: "✨"; position: absolute; top: 15px; right: 15px; color: var(--gold-muted); font-size: 20px; z-index: 10; }
-        .cv-container::after { content: "✿"; position: absolute; bottom: 15px; left: 15px; color: var(--deep-pink); font-size: 25px; z-index: 10; }
-
-        /* القائمة الجانبية */
         .sidebar {
             flex: 1;
-            min-width: 280px;
+            min-width: 300px;
             background-color: var(--soft-pink);
             padding: 40px 25px;
             border-left: 1px solid var(--gold-light);
-            display: flex;
-            flex-direction: column;
         }
 
         .profile-frame {
-            width: 150px; height: 150px;
+            width: 160px; height: 160px;
             margin: 0 auto 25px;
             background: linear-gradient(45deg, var(--gold-muted), var(--gold-light));
             border-radius: 50%;
@@ -70,61 +63,41 @@
             color: var(--gold-muted);
             border-bottom: 2px solid var(--gold-light);
             padding-bottom: 5px;
-            margin-top: 30px;
-            font-size: 1.2rem;
+            margin-top: 35px;
+            font-size: 1.3rem;
         }
 
-        .contact-item { margin: 15px 0; display: flex; align-items: center; font-size: 0.9rem; word-break: break-word; }
-        
+        .contact-item { margin: 18px 0; display: flex; align-items: center; font-size: 0.95rem; }
+        .contact-item a { text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%; transition: 0.3s; }
+        .contact-item a:hover { color: var(--gold-muted); transform: translateX(-5px); }
+
         .icon-wrap {
-            width: 35px; height: 35px;
-            min-width: 35px;
+            width: 38px; height: 38px;
             border-radius: 50%;
             background: var(--white);
             border: 1px solid var(--gold-muted);
             display: flex; justify-content: center; align-items: center;
-            margin-left: 12px;
+            margin-left: 15px;
             box-shadow: 2px 2px 0 var(--gold-light);
         }
-        .icon-wrap i { color: var(--gold-muted); font-size: 0.9rem; }
+        .icon-wrap i { color: var(--gold-muted); font-size: 1rem; }
 
-        /* المحتوى الرئيسي */
-        .main-content { flex: 2; padding: 40px; background: var(--white); min-width: 300px; }
+        .main-content { flex: 2; padding: 50px; background: var(--white); }
 
-        .header-name h1 { font-family: 'Amiri', serif; font-size: 2.5rem; margin: 0; color: var(--gold-muted); }
-        .job-titles { margin-top: 10px; color: #666; font-weight: 500; line-height: 1.6; }
+        .header-name h1 { font-family: 'Amiri', serif; font-size: 3rem; margin: 0; color: var(--gold-muted); }
+        .header-name p { font-size: 1.1rem; color: #888; margin-top: 5px; }
 
         .section-header {
             display: flex; align-items: center;
             color: var(--gold-muted);
-            margin: 35px 0 20px;
+            margin: 45px 0 25px;
             border-bottom: 1px solid var(--deep-pink);
-            padding-bottom: 8px;
+            padding-bottom: 10px;
         }
-        .section-header i { margin-left: 12px; font-size: 1.3rem; }
+        .section-header i { margin-left: 12px; font-size: 1.4rem; }
 
-        .about-text {
-            line-height: 1.8; 
-            text-align: justify; 
-            background: #fffcfd; 
-            padding: 20px; 
-            border-radius: 15px;
-            border-right: 4px solid var(--gold-muted);
-        }
+        .about-text { line-height: 1.8; text-align: justify; background: #fffcfd; padding: 15px; border-radius: 10px; border-right: 4px solid var(--gold-muted); }
 
-        /* الشهادات */
-        .certs-container { display: grid; grid-template-columns: 1fr; gap: 20px; }
-        .cert-card {
-            border: 2px solid var(--soft-pink);
-            border-radius: 12px;
-            padding: 10px;
-            text-align: center;
-            background: #fff;
-        }
-        .cert-card img { width: 100%; max-width: 400px; border-radius: 8px; }
-        .cert-card span { display: block; margin-top: 10px; font-weight: bold; color: var(--gold-muted); }
-
-        /* المهارات */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -132,22 +105,16 @@
         }
         .skill-item {
             background: var(--soft-pink);
-            padding: 15px;
+            padding: 12px;
             border-radius: 12px;
             text-align: center;
             transition: 0.3s;
         }
-        .skill-item:hover { background: var(--deep-pink); transform: translateY(-3px); }
+        .skill-item:hover { background: var(--white); border: 1px solid var(--gold-muted); }
         .skill-item i { font-size: 1.8rem; color: var(--gold-muted); margin-bottom: 8px; display: block; }
         .skill-item span { font-size: 0.8rem; font-weight: bold; }
 
-        /* الجوال */
-        @media (max-width: 768px) {
-            .cv-container { flex-direction: column; }
-            .sidebar { border-left: none; border-bottom: 2px solid var(--gold-light); padding: 30px 20px; }
-            .main-content { padding: 30px 20px; }
-            .header-name h1 { font-size: 2rem; }
-        }
+        @media (max-width: 768px) { .cv-container { flex-direction: column; } .sidebar { border-left: none; border-bottom: 2px solid var(--gold-light); } .main-content { padding: 30px; } }
     </style>
 </head>
 <body>
@@ -159,63 +126,72 @@
         </div>
 
         <h3 class="sidebar-title">✨ تواصل معي</h3>
-        <div class="contact-item"><div class="icon-wrap"><i class="fab fa-whatsapp"></i></div> 779409142</div>
-        <div class="contact-item"><div class="icon-wrap"><i class="fas fa-envelope"></i></div> khetam.ghouli@gmail.com</div>
+        
         <div class="contact-item">
-            <div class="icon-wrap"><i class="fas fa-map-marker-alt"></i></div> 
-            <span>اليمن، قعطبة (RPR5+CF)</span>
+            <a href="https://wa.me/967779409142" target="_blank">
+                <div class="icon-wrap"><i class="fab fa-whatsapp"></i></div> 
+                <span>واتساب: 779409142</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="tel:967779409142">
+                <div class="icon-wrap"><i class="fas fa-phone-alt"></i></div> 
+                <span>اتصال: 779409142</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="mailto:khetam.ghouli@gmail.com">
+                <div class="icon-wrap"><i class="fas fa-envelope"></i></div> 
+                <span>البريد الإلكتروني</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="#">
+                <div class="icon-wrap"><i class="fas fa-map-marker-alt"></i></div> 
+                <span>قعطبة، اليمن</span>
+            </a>
         </div>
 
         <h3 class="sidebar-title">🎓 اللغات</h3>
-        <div class="contact-item"><div class="icon-wrap"><i class="fas fa-language"></i></div> العربية (اللغة الأم)</div>
+        <div class="contact-item"><div class="icon-wrap"><i class="fas fa-language"></i></div> العربية (الأم)</div>
         <div class="contact-item"><div class="icon-wrap"><i class="fas fa-star"></i></div> الإنجليزية (متوسط)</div>
     </div>
 
     <div class="main-content">
         <div class="header-name">
             <h1>ختام فضل الغولي</h1>
-            <div class="job-titles">
-                <span><i class="fas fa-code"></i> مبرمجة نظم ومعلومات</span><br>
-                <span><i class="fas fa-wand-magic-sparkles"></i> مصممة مبدعة وصانعة محتوى بصري</span>
-            </div>
+            <p>مبرمجة نظم ومعلومات | مصممة وصانعة محتوى بصري ✿</p>
         </div>
 
-        <div class="section-header">
-            <i class="fas fa-heart"></i>
-            <h3>التعريف الشخصي</h3>
-        </div>
+        <div class="section-header"><i class="fas fa-magic"></i><h3>النبذة الشخصية</h3></div>
         <p class="about-text">
             أنا إنسانة طموحة وشغوفة، أؤمن بأن محبة الخير للآخرين والسعي لنفعهم هو أساس النجاح الحقيقي. أدرس حالياً البرمجة في المعهد الوطني بكل حماس، وأعمل بجد لتطوير نفسي ليس فقط في كتابة الأكواد، بل وفي فضاءات التصوير والتصميم؛ حيث أجد متعتي في تحويل الخيال إلى واقع بصري ملموس.
         </p>
 
-        <div class="section-header">
-            <i class="fas fa-university"></i>
-            <h3>المسار التعليمي</h3>
+        <div class="section-header"><i class="fas fa-award"></i><h3>المؤهلات العلمية</h3></div>
+        <div style="margin-bottom: 20px; display: flex; align-items: center;">
+            <i class="fas fa-graduation-cap" style="color: var(--gold-muted); margin-left: 10px; font-size: 1.5rem;"></i>
+            <div><strong>طالبة في المعهد الوطني</strong> - قسم البرمجة ونظم المعلومات</div>
         </div>
-        <div style="padding-right: 15px;">
-            <p><strong><i class="fas fa-graduation-cap"></i> طالبة في المعهد الوطني</strong><br>
-            <small>قسم البرمجة ونظم المعلومات - قيد الدراسة</small></p>
-            
-            <div class="cert-card" style="margin-top: 15px;">
-                <img src="cert.jpg" alt="شهادة الثانوية">
-                <span>شهادة إتمام الدراسة الثانوية العامة</span>
-            </div>
+        <div style="border: 2px solid var(--soft-pink); padding: 10px; border-radius: 12px; text-align: center;">
+            <img src="cert.jpg" alt="الشهادة" style="width: 100%; border-radius: 8px;">
+            <span style="display: block; margin-top: 10px; font-weight: bold; color: var(--gold-muted);">شهادة إتمام الدراسة الثانوية العامة</span>
         </div>
 
-        <div class="section-header">
-            <i class="fas fa-star"></i>
-            <h3>المهارات التقنية والإبداعية</h3>
-        </div>
+        <div class="section-header"><i class="fas fa-laptop-code"></i><h3>المهارات الإبداعية</h3></div>
         <div class="skills-grid">
-            <div class="skill-item"><i class="fas fa-laptop-code"></i><span>C# Language</span></div>
-            <div class="skill-item"><i class="fas fa-database"></i><span>SQL Server</span></div>
+            <div class="skill-item"><i class="fas fa-code"></i><span>C# & SQL</span></div>
             <div class="skill-item"><i class="fab fa-html5"></i><span>HTML & CSS</span></div>
-            <div class="skill-item"><i class="fas fa-bezier-curve"></i><span>تصميم جرافيكي</span></div>
-            <div class="skill-item"><i class="fas fa-camera-retro"></i><span>تصوير فوتوغرافي</span></div>
+            <div class="skill-item"><i class="fas fa-paint-brush"></i><span>تصميم جرافيك</span></div>
+            <div class="skill-item"><i class="fas fa-camera"></i><span>تصوير</span></div>
             <div class="skill-item"><i class="fas fa-file-word"></i><span>MS Office</span></div>
             <div class="skill-item"><i class="fas fa-image"></i><span>تعديل الصور</span></div>
+            <div class="skill-item"><i class="fas fa-palette"></i><span>رسم إبداعي</span></div>
             <div class="skill-item"><i class="fas fa-lightbulb"></i><span>صناعة محتوى</span></div>
-            <div class="skill-item"><i class="fas fa-users-cog"></i><span>خدمة الآخرين</span></div>
+            <div class="skill-item"><i class="fas fa-brain"></i><span>تفكير منطقي</span></div>
         </div>
     </div>
 </div>
